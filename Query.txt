@@ -1,0 +1,31 @@
+-- Se asume que en la tabla Product hay una Foreign key market_id
+-- Se asume que en la tabla Price hay una Foreign key product_id
+
+WITH LastActivePrice AS (
+  SELECT
+    product_id,
+    MIN(discount_price) AS min_discount_price
+  FROM
+    Price
+  WHERE
+    active = 1
+  GROUP BY
+    product_id
+)
+
+SELECT
+  p.name AS product_name,
+  p.Ean,
+  p.SKU,
+  m.name AS market_name,
+  pr.min_discount_price AS last_active_price
+FROM
+  Product p
+JOIN
+  Market m ON p.market_id = m.id
+JOIN
+  LastActivePrice pr ON p.id = pr.product_id
+JOIN
+  Price p2 ON p.id = p2.product_id AND pr.min_discount_price = p2.discount_price
+WHERE
+  p2.active = 1;
