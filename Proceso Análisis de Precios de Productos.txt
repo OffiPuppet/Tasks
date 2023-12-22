@@ -1,0 +1,30 @@
+Proceso: Análisis de Precios de Productos en Diferentes Mercados
+
+1. Extracción de Datos:
+
+Accedemos a las tablas "Product", "Market" y "Price" en la base de datos.
+Extraemos los datos como los precios de los productos, nombres de productos, información del mercado, y fechas de creación.
+
+
+2. Agrupación por Producto y Mercado:
+
+Agrupamos los datos por producto y mercado para obtener una visión robusta.
+Calculamos el precio promedio, precio mínimo y precio máximo por producto en cada mercado.
+
+
+3. Identificación de Tendencias de Precios:
+
+Analizamos la evolución de los precios a lo largo de X tiempo.
+Luego identificamos productos con tendencias de precios significativas, ya sea al alza o a la baja.
+
+
+4. Comparación entre Mercados:
+
+Luego comparamos la variación de precios entre diferentes mercados para un mismo producto.
+Procedemos a destacar mercados con fluctuaciones significativas.
+
+
+5. Programación Automática:
+
+Se programa la ejecución automática del proceso en intervalos regulares, por ejemplo, diariamente, cada semana o al final de cada mes, etc.
+Este proceso automatizado proporciona información valiosa sobre la variación de precios de productos en diferentes mercados, ayudando a la toma de decisiones estratégicas en cuanto a la fijación de precios y la gestión de productos.
